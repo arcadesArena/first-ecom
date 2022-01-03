@@ -29,6 +29,19 @@ class _SettingsPageState extends State<SettingsPage> {
               children: [
                 Icon(Icons.person,color: Colors.blueGrey,),
                 SizedBox(width: 8,),
+                Text("User",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+              ],
+            ),
+            Divider(height: 15,thickness: 2,),
+            SizedBox(height: 10,),
+            buildAccountOptionRow(context, "Edit Details"),
+            buildAccountOptionRow(context, "Contacts"),
+            buildAccountOptionRow(context, "Shipping Details"),
+            buildAccountOptionRow(context, "Payment Details"),
+            SizedBox(height: 40,),Row(
+              children: [
+                Icon(Icons.person,color: Colors.blueGrey,),
+                SizedBox(width: 8,),
                 Text("Account",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
               ],
             ),
@@ -50,8 +63,7 @@ class _SettingsPageState extends State<SettingsPage> {
             Divider(height: 15,thickness: 2,),
             SizedBox(height: 10,),
             buildNotificationOptionRow("New for you", true),
-            buildNotificationOptionRow("Account activity", true),
-            buildNotificationOptionRow("Opportunity", false),
+            buildNotificationOptionRow("Account activity", false),
             SizedBox(
               height: 50,
             ),
